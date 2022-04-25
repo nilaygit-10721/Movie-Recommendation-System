@@ -194,7 +194,7 @@ function select_movie(){
             success: handleFormSuccess,
             error: handleFormError,
         }) // end of ajax
-        if (this.id != "shuffle"){
+        if (!['shuffle', 'SearchBtn'].includes(this.id)) {
             counter += 1
         }
         
