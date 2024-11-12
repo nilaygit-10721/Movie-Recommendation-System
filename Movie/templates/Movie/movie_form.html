@@ -1,0 +1,17 @@
+<!-- Movie/templates/Movie/movie_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Movie</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Movie</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% if form.instance.pk %}Update{% else %}Create{% endif %} Movie</button>
+    </form>
+    <a href="{% url 'movie_list' %}">Back to Movie List</a>
+</body>
+</html>

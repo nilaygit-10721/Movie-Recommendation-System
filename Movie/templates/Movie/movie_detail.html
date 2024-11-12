@@ -1,0 +1,18 @@
+<!-- Movie/templates/Movie/movie_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie.title }} - Details</title>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p><strong>Description:</strong> {{ movie.description }}</p>
+    <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    <p><strong>Rating:</strong> {{ movie.rating }}</p>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+
+    <a href="{% url 'movie_update' movie.pk %}">Edit</a>
+    <a href="{% url 'movie_list' %}">Back to Movie List</a>
+</body>
+</html>
